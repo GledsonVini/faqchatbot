@@ -8,3 +8,4 @@ pandas
 tiktoken
 python-dotenv
 colorama
+streamlit
