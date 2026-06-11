@@ -1,5 +1,7 @@
 # ShopBot — FAQ Chatbot with RAG
 
+**[🚀 Live demo → faqchatbot23.streamlit.app](https://faqchatbot23.streamlit.app/)**
+
 A customer support FAQ chatbot for a fictional Canadian online retailer (ShopEasy), built with **Retrieval-Augmented Generation (RAG)**. Instead of relying on the LLM's memory, the bot retrieves the most relevant Q&A pairs from a real customer support dataset and uses them as grounded context — reducing hallucinations and keeping answers on-policy.
 
 ## How it works
@@ -33,7 +35,8 @@ pip install -r requirements.txt
 # add your key
 cp .env.example .env   # then edit .env
 
-python faq_chatbot.py
+python faq_chatbot.py        # CLI version
+streamlit run app.py         # Web UI version
 ```
 
 Download the dataset from [Kaggle](https://www.kaggle.com/datasets/bitext/bitext-gen-ai-chatbot-customer-support-dataset) and save it as `bitext_customer_support.csv` in the project root.
@@ -76,6 +79,6 @@ ShopBot: If your order has already shipped, you can refuse delivery or request a
 
 ## Roadmap
 
-- [ ] Web UI (chat interface)
-- [ ] Streaming responses
+- [x] Web UI (chat interface) — [live on Streamlit Cloud](https://faqchatbot23.streamlit.app/)
+- [x] Streaming responses
 - [ ] Evaluation set to measure retrieval accuracy
